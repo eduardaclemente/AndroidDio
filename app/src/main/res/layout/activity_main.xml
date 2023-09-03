@@ -1,42 +1,55 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<LinearLayout
+<RelativeLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:paddingLeft="16dp"
-        android:paddingRight="16dp">
-        
-        <TextView android:layout_width="wrap_content"
-                  android:layout_height="wrap_content"
-                  android:text="Oi eu sou o Goku!"
-        />
+        android:paddingRight="16dp"
+        android:paddingLeft="16dp">
 
-        <TextView android:layout_width="wrap_content"
-                  android:layout_height="wrap_content"
-                  android:text="Oi eu sou o Vegeta!!"
-        />
-
-        <EditText android:layout_width="match_parent"
-                  android:layout_height="wrap_content"
-        />
-
-        <EditText android:layout_width="match_parent"
-                  android:layout_height="wrap_content"
-        />
-
-        <EditText android:layout_width="match_parent"
-                  android:layout_height="wrap_content"
-        />
-
-        <EditText android:layout_width="match_parent"
-                  android:layout_height="wrap_content"
-        />
-        
-        <Button android:layout_width="wrap_content"
+        <EditText
+                android:id="@+id/nome"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Enviar Formulários"
+                android:hint="Nome">
+        </EditText>
+
+        <EditText
+                android:id="@+id/sobronome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/nome"
+                android:hint="Sobrenome">
+        </EditText>
+
+        <Spinner
+                android:id="@+id/data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/texto1"
         />
 
-</LinearLayout>
+        <TextView
+                android:id="@+id/texto1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cidade: Itaquaquecetuba"
+                android:layout_below="@id/sobronome"
+        />
+
+        <TextView
+                android:id="@+id/texto2"
+                android:layout_width="96dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/data"
+                android:text="Gosto Musical"
+        />
+
+        <Button
+                android:id="@+id/btn_enviar"
+                android:layout_width="96dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/texto2"
+                android:text="Enviar"
+        />
+</RelativeLayout>
